@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ControlModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="Sp_Key_Fields" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ezyadmin">
+          <Parameter Name="v_table" Type="varchar" Mode="In" />
+          <Parameter Name="v_output" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="Usp_Ezy_AuthenticateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ezyadmin">
+          <Parameter Name="Pvc_ClientId" Type="varchar" Mode="In" />
+          <Parameter Name="Pvc_UserId" Type="varchar" Mode="In" />
+          <Parameter Name="Pvc_Password" Type="varchar" Mode="In" />
+          <Parameter Name="Pvc_Database" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Usp_Ezy_Tools_BackupAllDatabases" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ezyadmin">
+          <Parameter Name="Path" Type="varchar" Mode="In" />
+          <Parameter Name="Type" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="ControlModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ControlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ControlEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="Sp_Key_Fields">
+            <Parameter Name="v_table" Mode="In" Type="String" />
+            <Parameter Name="v_output" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Usp_Ezy_Tools_BackupAllDatabases">
+            <Parameter Name="Path" Mode="In" Type="String" />
+            <Parameter Name="Type" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Usp_Ezy_AuthenticateUser" >
+            <ReturnType  Type="Collection(ControlModel.AuthenticateUser_Result2)" />
+            <ReturnType  Type="Collection(ControlModel.Authorization_Result)" />
+            <Parameter Name="Pvc_ClientId" Mode="In" Type="String" />
+            <Parameter Name="Pvc_UserId" Mode="In" Type="String" />
+            <Parameter Name="Pvc_Password" Mode="In" Type="String" />
+            <Parameter Name="Pvc_Database" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ValidateUserId" ReturnType="Collection(ControlModel.AuthenticateUser_Result1)">
+            <Parameter Name="Pvc_ClientId" Mode="In" Type="String" />
+            <Parameter Name="Pvc_UserId" Mode="In" Type="String" />
+            <Parameter Name="Pvc_Password" Mode="In" Type="String" />
+            <Parameter Name="Pvc_Database" Mode="In" Type="String" />
+          </FunctionImport> 
+        </EntityContainer>
+        <ComplexType Name="AuthenticateUser_Result1">
+          <Property Type="String" Name="DBINFO" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="DISPLAY" Nullable="true" MaxLength="9" />
+        </ComplexType>
+        <ComplexType Name="AuthenticateUser_Result2">
+          <Property Type="Boolean" Name="U_SUSPEND" Nullable="true" />
+          <Property Type="Guid" Name="U_CODE" Nullable="false" />
+          <Property Type="String" Name="U_LOGINID" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="U_NAME" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="U_DESIGNATION" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="U_PASSWORD" Nullable="true" MaxLength="8" />
+          <Property Type="Guid" Name="U_REPORTINGTO" Nullable="true" />
+          <Property Type="DateTime" Name="U_DOB" Nullable="true" Precision="23" />
+          <Property Type="String" Name="U_DEFAULTLINK" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="U_EMAIL" Nullable="true" MaxLength="256" />
+          <Property Type="DateTime" Name="U_ACTIVETILL" Nullable="true" Precision="23" />
+          <Property Type="String" Name="U_AVATAR" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="U_BU" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="U_BRANCH" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="U_WH" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="U_DEPT" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="C_ID" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="C_NAME" Nullable="true" MaxLength="55" />
+          <Property Type="String" Name="C_ADDRESS" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="C_CITY" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="C_ZIP" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="C_STATE" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="C_COUNTRY" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="C_TRN_CURRENCY" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="C_LOGO" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="C_LOGO_WIDTH" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="C_LOGO_HEIGHT" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="C_FYEAR_START" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="C_FYEAR_END" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="C_LONGITUDE" Nullable="true" />
+          <Property Type="Int32" Name="C_LATITUDE" Nullable="true" />
+          <Property Type="String" Name="C_SMTPHOST_IN" Nullable="true" MaxLength="256" />
+          <Property Type="Int32" Name="C_SMTPHOST_IN_PORT" Nullable="true" />
+          <Property Type="String" Name="C_SMTPHOST_OUT" Nullable="true" MaxLength="256" />
+          <Property Type="Int32" Name="C_SMTPHOST_OUT_PORT" Nullable="true" />
+          <Property Type="String" Name="C_SMTP_USER" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="C_SMTP_PASSWORD" Nullable="true" MaxLength="30" />
+          <Property Type="Boolean" Name="C_SSL_ENABLED" Nullable="true" />
+          <Property Type="String" Name="C_DB_SERVER" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="C_DB_NAME" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="C_DB_USER" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="C_DB_PASSWORD" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="C_TODAY" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="Authorization_Result">
+          <Property Type="Guid" Name="M_ID" Nullable="false" />
+          <Property Type="String" Name="M_CODE" Nullable="false" MaxLength="16" />
+          <Property Type="String" Name="M_NAME" Nullable="false" MaxLength="60" />
+          <Property Type="String" Name="M_URL" Nullable="true" MaxLength="193" />
+          <Property Type="String" Name="M_LEVEL" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="M_ICON" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="M_TARGET" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="M_SETTINGS" Nullable="true" MaxLength="Max" />
+        </ComplexType> 
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ControlModelStoreContainer" CdmEntityContainer="ControlEntities" >
+          <FunctionImportMapping FunctionImportName="Sp_Key_Fields" FunctionName="ControlModel.Store.Sp_Key_Fields" />
+          <FunctionImportMapping FunctionImportName="Usp_Ezy_Tools_BackupAllDatabases" FunctionName="ControlModel.Store.Usp_Ezy_Tools_BackupAllDatabases" />
+          <FunctionImportMapping FunctionImportName="Usp_Ezy_AuthenticateUser" FunctionName="ControlModel.Store.Usp_Ezy_AuthenticateUser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ControlModel.AuthenticateUser_Result2">
+                <ScalarProperty Name="U_SUSPEND" ColumnName="U_SUSPEND" />
+                <ScalarProperty Name="U_CODE" ColumnName="U_CODE" />
+                <ScalarProperty Name="U_LOGINID" ColumnName="U_LOGINID" />
+                <ScalarProperty Name="U_NAME" ColumnName="U_NAME" />
+                <ScalarProperty Name="U_DESIGNATION" ColumnName="U_DESIGNATION" />
+                <ScalarProperty Name="U_PASSWORD" ColumnName="U_PASSWORD" />
+                <ScalarProperty Name="U_REPORTINGTO" ColumnName="U_REPORTINGTO" />
+                <ScalarProperty Name="U_DOB" ColumnName="U_DOB" />
+                <ScalarProperty Name="U_DEFAULTLINK" ColumnName="U_DEFAULTLINK" />
+                <ScalarProperty Name="U_EMAIL" ColumnName="U_EMAIL" />
+                <ScalarProperty Name="U_ACTIVETILL" ColumnName="U_ACTIVETILL" />
+                <ScalarProperty Name="U_AVATAR" ColumnName="U_AVATAR" />
+                <ScalarProperty Name="U_BU" ColumnName="U_BU" />
+                <ScalarProperty Name="U_BRANCH" ColumnName="U_BRANCH" />
+                <ScalarProperty Name="U_WH" ColumnName="U_WH" />
+                <ScalarProperty Name="U_DEPT" ColumnName="U_DEPT" />
+                <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+                <ScalarProperty Name="C_NAME" ColumnName="C_NAME" />
+                <ScalarProperty Name="C_ADDRESS" ColumnName="C_ADDRESS" />
+                <ScalarProperty Name="C_CITY" ColumnName="C_CITY" />
+                <ScalarProperty Name="C_ZIP" ColumnName="C_ZIP" />
+                <ScalarProperty Name="C_STATE" ColumnName="C_STATE" />
+                <ScalarProperty Name="C_COUNTRY" ColumnName="C_COUNTRY" />
+                <ScalarProperty Name="C_TRN_CURRENCY" ColumnName="C_TRN_CURRENCY" />
+                <ScalarProperty Name="C_LOGO" ColumnName="C_LOGO" />
+                <ScalarProperty Name="C_LOGO_WIDTH" ColumnName="C_LOGO_WIDTH" />
+                <ScalarProperty Name="C_LOGO_HEIGHT" ColumnName="C_LOGO_HEIGHT" />
+                <ScalarProperty Name="C_FYEAR_START" ColumnName="C_FYEAR_START" />
+                <ScalarProperty Name="C_FYEAR_END" ColumnName="C_FYEAR_END" />
+                <ScalarProperty Name="C_LONGITUDE" ColumnName="C_LONGITUDE" />
+                <ScalarProperty Name="C_LATITUDE" ColumnName="C_LATITUDE" />
+                <ScalarProperty Name="C_SMTPHOST_IN" ColumnName="C_SMTPHOST_IN" />
+                <ScalarProperty Name="C_SMTPHOST_IN_PORT" ColumnName="C_SMTPHOST_IN_PORT" />
+                <ScalarProperty Name="C_SMTPHOST_OUT" ColumnName="C_SMTPHOST_OUT" />
+                <ScalarProperty Name="C_SMTPHOST_OUT_PORT" ColumnName="C_SMTPHOST_OUT_PORT" />
+                <ScalarProperty Name="C_SMTP_USER" ColumnName="C_SMTP_USER" />
+                <ScalarProperty Name="C_SMTP_PASSWORD" ColumnName="C_SMTP_PASSWORD" />
+                <ScalarProperty Name="C_SSL_ENABLED" ColumnName="C_SSL_ENABLED" />
+                <ScalarProperty Name="C_DB_SERVER" ColumnName="C_DB_SERVER" />
+                <ScalarProperty Name="C_DB_NAME" ColumnName="C_DB_NAME" />
+                <ScalarProperty Name="C_DB_USER" ColumnName="C_DB_USER" />
+                <ScalarProperty Name="C_DB_PASSWORD" ColumnName="C_DB_PASSWORD" />
+                <ScalarProperty Name="C_TODAY" ColumnName="C_TODAY" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ControlModel.Authorization_Result">
+                <ScalarProperty Name="M_CODE" ColumnName="M_CODE" />
+                <ScalarProperty Name="M_NAME" ColumnName="M_NAME" />
+                <ScalarProperty Name="M_URL" ColumnName="M_URL" />
+                <ScalarProperty Name="M_LEVEL" ColumnName="M_LEVEL" />
+                <ScalarProperty Name="M_ICON" ColumnName="M_ICON" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ValidateUserId" FunctionName="ControlModel.Store.Usp_Ezy_AuthenticateUser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ControlModel.AuthenticateUser_Result1">
+                <ScalarProperty Name="DBINFO" ColumnName="DBINFO" />
+                <ScalarProperty Name="DISPLAY" ColumnName="DISPLAY" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping> 
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

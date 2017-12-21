@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF66FA91-3E19-494B-BED5-72EAF57B3B1C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FBTS.Model.Transaction</RootNamespace>
+    <AssemblyName>FBTS.Model.Transaction</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\Dev\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <OutputPath>bin\QA\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <OutputPath>bin\Prod\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|x86'">
+    <OutputPath>bin\x86\Dev\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|x86'">
+    <OutputPath>bin\x86\QA\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|x86'">
+    <OutputPath>bin\x86\Prod\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\AccountGroup.cs" />
+    <Compile Include="Accounts\AccountGroups.cs" />
+    <Compile Include="Accounts\AccountMapping.cs" />
+    <Compile Include="Accounts\AccountMappings.cs" />
+    <Compile Include="Accounts\Bank.cs" />
+    <Compile Include="Accounts\BankCheque.cs" />
+    <Compile Include="Accounts\BankCheques.cs" />
+    <Compile Include="Accounts\Banks.cs" />
+    <Compile Include="Accounts\BillDetail.cs" />
+    <Compile Include="Accounts\BillDetails.cs" />
+    <Compile Include="Accounts\CashBankJournal.cs" />
+    <Compile Include="Accounts\CashBankJournals.cs" />
+    <Compile Include="Accounts\Contact.cs" />
+    <Compile Include="Accounts\Contacts.cs" />
+    <Compile Include="Accounts\Credit.cs" />
+    <Compile Include="Accounts\PDC.cs" />
+    <Compile Include="Accounts\PDCS.cs" />
+    <Compile Include="Accounts\TRNReference.cs" />
+    <Compile Include="Accounts\TRNReferences.cs" />
+    <Compile Include="Accounts\Voucher.cs" />
+    <Compile Include="Accounts\Vouchers.cs" />
+    <Compile Include="Accounts\VoucherSetup.cs" />
+    <Compile Include="Accounts\VoucherSetups.cs" />
+    <Compile Include="Enum\AccountType.cs" />
+    <Compile Include="Enum\FormType.cs" />
+    <Compile Include="Enum\TransactionType.cs" />
+    <Compile Include="HR-Payroll\BankMaster.cs" />
+    <Compile Include="HR-Payroll\BankMasters.cs" />
+    <Compile Include="HR-Payroll\Department.cs" />
+    <Compile Include="HR-Payroll\Departments.cs" />
+    <Compile Include="HR-Payroll\Earning.cs" />
+    <Compile Include="HR-Payroll\Earnings.cs" />
+    <Compile Include="HR-Payroll\EmployeeDesignation.cs" />
+    <Compile Include="HR-Payroll\EmployeeDesignations.cs" />
+    <Compile Include="HR-Payroll\EmployeeDetail.cs" />
+    <Compile Include="HR-Payroll\EmployeeDetails.cs" />
+    <Compile Include="HR-Payroll\EmployeeEarningDeduction.cs" />
+    <Compile Include="HR-Payroll\EmployeeEarningDeductions.cs" />
+    <Compile Include="HR-Payroll\EmployeeRef.cs" />
+    <Compile Include="HR-Payroll\EmployeeRefs.cs" />
+    <Compile Include="HR-Payroll\EmployeeSkill.cs" />
+    <Compile Include="HR-Payroll\EmployeeSkills.cs" />
+    <Compile Include="HR-Payroll\Grade.cs" />
+    <Compile Include="HR-Payroll\Grades.cs" />
+    <Compile Include="HR-Payroll\PayrollExpression.cs" />
+    <Compile Include="HR-Payroll\PayrollExpressions.cs" />
+    <Compile Include="Materials\StockCategory.cs" />
+    <Compile Include="Transactions\BillTracking.cs" />
+    <Compile Include="Transactions\BillTrackingDetail.cs" />
+    <Compile Include="Transactions\BillTrackingDetails.cs" />
+    <Compile Include="Transactions\BillTrackings.cs" />
+    <Compile Include="Transactions\BillValidition.cs" />
+    <Compile Include="Transactions\BillValiditions.cs" />
+    <Compile Include="Transactions\DashBoard.cs" />
+    <Compile Include="Transactions\DashBoards.cs" />
+    <Compile Include="Transactions\InventoryTransaction.cs" />
+    <Compile Include="Transactions\InvoiceTransaction.cs" />
+    <Compile Include="HR-Payroll\OperationalParameter.cs" />
+    <Compile Include="HR-Payroll\OperationalParameters.cs" />
+    <Compile Include="Transactions\OrderDetail.cs" />
+    <Compile Include="Transactions\OrderDetails.cs" />
+    <Compile Include="Transactions\OrderHead.cs" />
+    <Compile Include="Transactions\OrderTransactions.cs" />
+    <Compile Include="Transactions\ScheduleTransaction.cs" />
+    <Compile Include="Transactions\OrderTransaction.cs" />
+    <Compile Include="Transactions\TxnAcccountAddress.cs" />
+    <Compile Include="Transactions\TxnAccount.cs" />
+    <Compile Include="Accounts\AccountAddresses.cs" />
+    <Compile Include="Accounts\AccountBalances.cs" />
+    <Compile Include="Accounts\Accounts.cs" />
+    <Compile Include="Accounts\AccountBindType.cs" />
+    <Compile Include="Materials\Bom.cs" />
+    <Compile Include="Materials\Enums\MaterialHierarchyType.cs" />
+    <Compile Include="Materials\MaterialClasses.cs" />
+    <Compile Include="Transactions\TxnMaterials.cs" />
+    <Compile Include="Transactions\TxnMaterial.cs" />
+    <Compile Include="Materials\MaterialGroups.cs" />
+    <Compile Include="Materials\Boms.cs" />
+    <Compile Include="Materials\MaterialHierarchy.cs" />
+    <Compile Include="Materials\MaterialHierarchies.cs" />
+    <Compile Include="Materials\Materials.cs" />
+    <Compile Include="Materials\MaterialClass.cs" />
+    <Compile Include="Materials\MaterialGroup.cs" />
+    <Compile Include="Materials\Material.cs" />
+    <Compile Include="Materials\MaterialTypes.cs" />
+    <Compile Include="Materials\MaterialType.cs" />
+    <Compile Include="Accounts\Account.cs" />
+    <Compile Include="Accounts\AccountAddress.cs" />
+    <Compile Include="Accounts\AccountBalance.cs" />
+    <Compile Include="Accounts\AccountBasicInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transactions\TxnDefinition.cs" />
+    <Compile Include="Transactions\TxnDetails.cs" />
+    <Compile Include="Transactions\TxnReference.cs" />
+    <Compile Include="Transactions\TxnReferences.cs" />
+    <Compile Include="Transactions\TxnTaxParameters.cs" />
+    <Compile Include="Transactions\TxnTaxParameter.cs" />
+    <Compile Include="Transactions\TxnView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FBTS.Model.Common\FBTS.Model.Common.csproj">
+      <Project>{D1C25BFA-4AAD-4989-A105-ECCFFFC4D1ED}</Project>
+      <Name>FBTS.Model.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FBTS.Model.Control\FBTS.Model.Control.csproj">
+      <Project>{8e252831-076f-46d6-a4ef-a1d9b7fae23c}</Project>
+      <Name>FBTS.Model.Control</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

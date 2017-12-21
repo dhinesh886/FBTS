@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InfoMenu" xml:space="preserve">
+    <value> 
+      &lt;p class="nav-title"&gt;{0}&lt;/p&gt;
+  </value>
+    <comment>Html Markup for Info and Action Menu</comment>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>
+   &lt;li class="{0}"&gt;
+        &lt;a class="{1}" href="{2}"&gt;
+            {3}
+            &lt;i class="{6}"&gt;&lt;/i&gt;
+            &lt;span&gt;{4}&lt;/span&gt;
+        &lt;/a&gt;
+      {5}
+   &lt;/li&gt;
+  </value>
+    <comment>0,1 -&gt; activeCSS, 2 -&gt; url or Javascript, 3 -&gt; ArrowNode, 4 -&gt; Menu title, 5 -&gt; SubMenu Markup</comment>
+  </data>
+  <data name="ArrowNode" xml:space="preserve">
+    <value>
+   &lt;i class="toggle-accordion"&gt;&lt;/i&gt;
+  </value>
+    <comment>0 -&gt; SubMenu Markup</comment>
+  </data>
+  <data name="SubMenuWrapper" xml:space="preserve">
+    <value>
+   &lt;ul class="sub-menu"&gt;
+        {0}
+    &lt;/ul&gt;
+  </value>
+    <comment>0 -&gt; SubMenu Markup</comment>
+  </data>
+  <data name="SubMenu" xml:space="preserve">
+    <value>
+         &lt;li class="{0}"&gt;&lt;a href="{1}"&gt;&lt;span&gt;{2}&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                         
+  </value>
+  </data>
+  <data name="DataRow" xml:space="preserve">
+    <value>
+         &lt;div class="form-group"&gt;
+        &lt;div class="col-sm-5"&gt;
+                                                 &lt;div class="pull-right"&gt; {0}&lt;/div&gt;
+                                                &lt;/div&gt;
+                                               
+                                                &lt;div class="col-sm-7"&gt;
+                                                    {1}
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;                         
+  </value>
+    <comment>0 -&gt; ActiveMenuCss, 1 -&gt; Link, 2 -&gt; Menu title</comment>
+  </data>
+  <data name="Default_lnkLogin_Click_Login_Failed_Error" xml:space="preserve">
+    <value>Login Failed. Please contact your administrator to get more details about the failure</value>
+  </data>
+  <data name="Default_lnkLogin_Click_Invalid_Userid_or_Password__" xml:space="preserve">
+    <value>Login Failed. Could not get SSOID.</value>
+  </data>
+  <data name="Default_lnkLogin_Click_Please_Enter_Valid_userid_and_password__" xml:space="preserve">
+    <value>Login Failed. Could not get SSOID.</value>
+  </data>
+  <data name="Default_txtUserId_TextChanged_Invalid_Userid__" xml:space="preserve">
+    <value>Invalid Userid!!</value>
+  </data>
+  <data name="UserProfileFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save UserProfile!</value>
+  </data>
+  <data name="UserProfileSaved" xml:space="preserve">
+    <value>UserProfile has been Saved Successfully!!</value>
+  </data>
+  <data name="DesignationFailed" xml:space="preserve">
+    <value>Error occured while saving Designation!!</value>
+  </data>
+  <data name="DesignationSaved" xml:space="preserve">
+    <value>Designation has been Saved Successfully</value>
+  </data>
+  <data name="ModuleFailed" xml:space="preserve">
+    <value>Modules Update Failed</value>
+  </data>
+  <data name="ModuleSaved" xml:space="preserve">
+    <value>Modules has been Saved Successfully!</value>
+  </data>
+  <data name="ComponentFailed" xml:space="preserve">
+    <value>Component Update Failed!!</value>
+  </data>
+  <data name="ComponentSaved" xml:space="preserve">
+    <value>Component has been Saved Successfully</value>
+  </data>
+  <data name="UOMFailed" xml:space="preserve">
+    <value>UOM Update Failed</value>
+  </data>
+  <data name="UOMSaved" xml:space="preserve">
+    <value>UOM has been Saved Successfully!!</value>
+  </data>
+  <data name="StageFailed" xml:space="preserve">
+    <value>Stage Update Failed</value>
+  </data>
+  <data name="StageSaved" xml:space="preserve">
+    <value>Stage has been Saved Successfully!!</value>
+  </data>
+  <data name="MaterialFailed" xml:space="preserve">
+    <value>Unexpected Error occurred while trying to save Materials, Entered Part may exist!!</value>
+  </data>
+  <data name="MaterialSaved" xml:space="preserve">
+    <value>Material has been Saved Successfully!!</value>
+  </data>
+  <data name="AttributeFailed" xml:space="preserve">
+    <value>Attribute Update Failed</value>
+  </data>
+  <data name="AttributeSaved" xml:space="preserve">
+    <value>Attributes has been Saved Successfully!!</value>
+  </data>
+  <data name="PartyMasterFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Party Master!</value>
+  </data>
+  <data name="PartyMasterSaved" xml:space="preserve">
+    <value>Party Master has been Saved Successfully!</value>
+  </data>
+  <data name="AnalysisFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Attribute!</value>
+  </data>
+  <data name="AnalysisSaved" xml:space="preserve">
+    <value>Attribute has been Saved Successfully!</value>
+  </data>
+  <data name="SubModuleFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save SubModule</value>
+  </data>
+  <data name="SubModuleSaved" xml:space="preserve">
+    <value>SubModule has been Saved Successfully!!</value>
+  </data>
+  <data name="AccessRightFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Set Access Rights!!</value>
+  </data>
+  <data name="AccessRightSaved" xml:space="preserve">
+    <value>Access Rights Saved Successfully!!</value>
+  </data>
+  <data name="MenuFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Menu!</value>
+  </data>
+  <data name="MenuSaved" xml:space="preserve">
+    <value>Menu has been Saved Successfully!!</value>
+  </data>
+  <data name="ProfileFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Profile!</value>
+  </data>
+  <data name="ProfileSaved" xml:space="preserve">
+    <value>Profile has been Saved Successfully!!</value>
+  </data>
+  <data name="ResourceFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Resource!</value>
+  </data>
+  <data name="EquipmentFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Equipment!</value>
+  </data>
+  <data name="EquipmentSaved" xml:space="preserve">
+    <value>Equipment saved successfully!</value>
+  </data>
+  <data name="ResourceSaved" xml:space="preserve">
+    <value>Resource has been Saved Successfully!!</value>
+  </data>
+  <data name="ClassFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Class!</value>
+  </data>
+  <data name="ClassSaved" xml:space="preserve">
+    <value>Class has been Saved Successfully!!</value>
+  </data>
+  <data name="GroupFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Group!!</value>
+  </data>
+  <data name="GroupSaved" xml:space="preserve">
+    <value>Group has been Saved Successfully!!</value>
+  </data>
+  <data name="TypeFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Type!!</value>
+  </data>
+  <data name="TypeSaved" xml:space="preserve">
+    <value>Type has been Saved Successfully!!</value>
+  </data>
+  <data name="ProcessStageFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Process Stage!</value>
+  </data>
+  <data name="ProcessStageSaved" xml:space="preserve">
+    <value>Process Stage has been Saved Successfully!!</value>
+  </data>
+  <data name="MaintenanceFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Maintenance!</value>
+  </data>
+  <data name="MaintenanceSaved" xml:space="preserve">
+    <value>Maintenance has been Saved Successfully!!</value>
+  </data>
+  <data name="LocationFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Location!</value>
+  </data>
+  <data name="LocationSaved" xml:space="preserve">
+    <value>Location has been Saved Successfully!!</value>
+  </data>
+  <data name="GradeFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Grade!</value>
+  </data>
+  <data name="GradeSaved" xml:space="preserve">
+    <value>Grade has been Saved Successfully!!</value>
+  </data>
+  <data name="EarningFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Earning!</value>
+  </data>
+  <data name="EarningSaved" xml:space="preserve">
+    <value>Earning has been Saved Successfully!!</value>
+  </data>
+  <data name="AccountFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Accounts!</value>
+  </data>
+  <data name="AccountSaved" xml:space="preserve">
+    <value>Account has been Saved Successfully!!</value>
+  </data>
+  <data name="TVTemplateFailed" xml:space="preserve">
+    <value>Tv Template Update Failed</value>
+  </data>
+  <data name="TVTemplateSaved" xml:space="preserve">
+    <value>TV Template Saved Successfully!!</value>
+  </data>
+  <data name="CategoryFailed" xml:space="preserve">
+    <value>Category Update Failed!!</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>Category has been Saved Successfully</value>
+  </data>
+  <data name="TeamMasterFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Team Master Data!</value>
+  </data>
+  <data name="TeamMasterSaved" xml:space="preserve">
+    <value>Team has been Saved Successfully!!</value>
+  </data>
+  <data name="StageMasterFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Stages Master Data!</value>
+  </data>
+  <data name="StageMasterSaved" xml:space="preserve">
+    <value>Stage has been Saved Successfully!!</value>
+  </data>
+  <data name="FieldRequestFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Field Request!</value>
+  </data>
+  <data name="FieldRequestSaved" xml:space="preserve">
+    <value>Field Request has been Saved Successfully!!</value>
+  </data>
+  <data name="ForecastingFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Forecasting!</value>
+  </data>
+  <data name="ForecastingSave" xml:space="preserve">
+    <value>Forecasting has been Saved Successfully!!</value>
+  </data>
+  <data name="TeamDataFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save TeamData!</value>
+  </data>
+  <data name="TeamDataSaved" xml:space="preserve">
+    <value>Team Data has been Saved Successfully!!</value>
+  </data>
+  <data name="VerificationSaved" xml:space="preserve">
+    <value>Verification has been Saved Successfully!!</value>
+  </data>
+  <data name="VerificayionFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Verification!</value>
+  </data>
+  <data name="NextStageFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Next Stage!</value>
+  </data>
+  <data name="NextStageSaved" xml:space="preserve">
+    <value>Next Stage has been Saved Successfully!!</value>
+  </data>
+  <data name="OrderingFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Ordering Data !</value>
+  </data>
+  <data name="OrderingSave" xml:space="preserve">
+    <value>OrderingData has been Saved Successfully!!</value>
+  </data>
+  <data name="DebriefingFailed" xml:space="preserve">
+    <value>Unexpected error occured while trying to save Debriefing!</value>
+  </data>
+  <data name="DebriefingSaved" xml:space="preserve">
+    <value>Debriefing has been Saved Successfully!!</value>
+  </data>
+  <data name="TrackingFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Tracking!</value>
+  </data>
+  <data name="TrackingSaved" xml:space="preserve">
+    <value>Tracking has been Saved Successfully!!</value>
+  </data>
+  <data name="ApprovedFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Approved!</value>
+  </data>
+  <data name="ApprovedSaved" xml:space="preserve">
+    <value>Approved has been Saved Successfully!!</value>
+  </data>
+  <data name="LocationSuspended" xml:space="preserve">
+    <value>Location has been Suspended Successfully!!</value>
+  </data>
+  <data name="LocationSuspendedFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Suspend Location!</value>
+  </data>
+  <data name="LocationIncluded" xml:space="preserve">
+    <value>Location has been Included Successfully!!</value>
+  </data>
+  <data name="LocationIncludedFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Included Location!</value>
+  </data>
+  <data name="PartIncluded" xml:space="preserve">
+    <value>Part has been Included Successfully!!</value>
+  </data>
+  <data name="PartIncludedFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Included Part !</value>
+  </data>
+  <data name="PartSuspended" xml:space="preserve">
+    <value>Part has been Suspended Successfully!!</value>
+  </data>
+  <data name="PartSuspendedFalied" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Suspend Part !</value>
+  </data>
+  <data name="ModalityFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to save Modality !</value>
+  </data>
+  <data name="ModalitySaved" xml:space="preserve">
+    <value>Modality has been Saved Successfully!!</value>
+  </data>
+  <data name="ModalityIncluded" xml:space="preserve">
+    <value>Modality has been Included !!</value>
+  </data>
+  <data name="ModalityIncludedFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Include Modality!</value>
+  </data>
+  <data name="ModalitySuspended" xml:space="preserve">
+    <value>Modality has been Suspended !!</value>
+  </data>
+  <data name="ModalitySuspendedFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Suspend Modality!</value>
+  </data>
+  <data name="UOMIncluded" xml:space="preserve">
+    <value>UOM has been Included Successfully!!</value>
+  </data>
+  <data name="UOMIncludedFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Include UOM!</value>
+  </data>
+  <data name="UOMSuspended" xml:space="preserve">
+    <value>UOM has been Suspended Successfully!!</value>
+  </data>
+  <data name="UOMSuspendedFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Suspend UOM!</value>
+  </data>
+  <data name="CountryFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Update Country!!</value>
+  </data>
+  <data name="CountrySaved" xml:space="preserve">
+    <value>Country has been Saved Successfully!!</value>
+  </data>
+  <data name="StateFailed" xml:space="preserve">
+    <value>Unexpected error occurred while trying to Update State!!</value>
+  </data>
+  <data name="StateSaved" xml:space="preserve">
+    <value>State has been Saved Successfully!!</value>
+  </data>
+  <data name="PartDdlFillValFaildMoreNoofRow" xml:space="preserve">
+    <value>Entered help part no. Find more parts,Write some more help to find less parts</value>
+  </data>
+  <data name="PartNotFoundFaild" xml:space="preserve">
+    <value>Entered help part no. not matching part ,Write correct Part no. help</value>
+  </data>
+  <data name="ValidationAllSelect" xml:space="preserve">
+    <value>Select All Parts some parts are still in pandding check</value>
+  </data>
+  <data name="AlternativePartValidation" xml:space="preserve">
+    <value>Alternative Part# cannot be same as actual part</value>
+  </data>
+</root>

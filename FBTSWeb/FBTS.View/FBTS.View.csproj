@@ -1,0 +1,1390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D280042-6C6A-4B2F-A56D-5A393910A904}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FBTS.View</RootNamespace>
+    <AssemblyName>FBTS.View</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\packages\AjaxControlToolkit.7.1213\lib\45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.Common\12.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\12.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WinForms\12.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.1\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppPages\Billing Tracking\FBTS_Ordering.aspx" />
+    <Content Include="AppPages\Billing Tracking\FBTS_VarificationTeam.aspx" />
+    <Content Include="AppPages\Common\404.aspx" />
+    <Content Include="AppPages\Common\500.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_Country.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_DeleteAllTransactionData.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_UOMMaster.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_AccessLevelSetup.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_CategoryMaster.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_CompanyProfile.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_Location.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_ManageMaterialHierarchy.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_PartMaster.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_PartyMaster.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_StageMaster.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_TeamMaster.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_UserProfile_SSO.aspx" />
+    <Content Include="AppPages\CPanel\FBTS_UserProfile.aspx" />
+    <Content Include="AppPages\DashBoardForms\FBTS_DashBoad.aspx" />
+    <Content Include="AppPages\Forecasting\FBTS_ApprovalFC.aspx" />
+    <Content Include="AppPages\Forecasting\FBTS_FieldRequestTeam.aspx" />
+    <Content Include="AppPages\Forecasting\FBTS_ForecastSpecialistTeam.aspx" />
+    <Content Include="AppPages\Forecasting\FBTS_Teams.aspx" />
+    <Content Include="AppPages\TxnStageFieldRequest.aspx" />
+    <Content Include="AppPages\Common\Ezy_Welcome.aspx" />
+    <Content Include="AppPages\Views\FBTS_AuditLog.aspx" />
+    <Content Include="AppPages\Views\FBTS_BilledPart.aspx" />
+    <Content Include="AppPages\Views\FBTS_BilledPartViews.aspx" />
+    <Content Include="AppPages\Views\FBTS_CompleteBillTracking.aspx" />
+    <Content Include="AppPages\Views\FBTS_ForcastingViews.aspx" />
+    <Content Include="AppPages\Views\FBTS_LocationList.aspx" />
+    <Content Include="AppPages\Views\FBTS_OrderDetails.aspx" />
+    <Content Include="AppPages\Views\FBTS_OrderDetailsForecasting.aspx" />
+    <Content Include="AppPages\Views\FBTS_OrderStatusWise.aspx" />
+    <Content Include="AppPages\Views\FBTS_OrderStatusWiseForcasting.aspx" />
+    <Content Include="AppPages\Views\FBTS_OrderView.aspx" />
+    <Content Include="AppPages\Views\FBTS_StageWiseOrder.aspx" />
+    <Content Include="InternalLogin.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="LoggingOff.aspx" />
+    <Content Include="Resources\UI\css\bootstrap-multiselect.css" />
+    <Content Include="Resources\UI\js\bootstrap-multiselect.js" />
+    <Content Include="SessionExpired.aspx" />
+    <Content Include="LogoutIntermediate.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Resources\Config\Debug\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\bat\buildconfig.bat" />
+    <Content Include="Resources\bat\copyifdifferent.bat" />
+    <Content Include="AppPages\Common\Site.Master" />
+    <None Include="Properties\PublishProfiles\FBTSPublish_QA.pubxml" />
+    <None Include="Resources\Config\Debug\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Resources\Config\Debug\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Resources\Config\Dev\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\Config\Dev\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Resources\Config\Dev\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Resources\Config\Prod\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\Config\Prod\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Resources\Config\Prod\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Resources\Config\QA\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\Config\QA\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Resources\Config\QA\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Resources\FileUploads\ExcelFile\New Text Document.txt" />
+    <Content Include="Resources\FileUploads\Logos\logo.png" />
+    <Content Include="Resources\FileUploads\Logos\logo1.png" />
+    <Content Include="Resources\FileUploads\UserImages\img.png" />
+    <Content Include="Resources\ResourceFiles\ColumnMappingInfo.xml" />
+    <Content Include="Resources\UI\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Resources\UI\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Resources\UI\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Resources\UI\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Resources\UI\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Resources\UI\css\CustomStyles.css" />
+    <Content Include="Resources\UI\css\fonts\fonts\BoldItalic\OpenSans-BoldItalic.svg" />
+    <Content Include="Resources\UI\css\fonts\fonts\Bold\OpenSans-Bold.svg" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBoldItalic\OpenSans-ExtraBoldItalic.svg" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBold\OpenSans-ExtraBold.svg" />
+    <Content Include="Resources\UI\css\fonts\fonts\Italic\OpenSans-Italic.svg" />
+    <Content Include="Resources\UI\css\fonts\fonts\LightItalic\OpenSans-LightItalic.svg" />
+    <Content Include="Resources\UI\css\fonts\fonts\Light\OpenSans-Light.svg" />
+    <Content Include="Resources\UI\css\fonts\fonts\Regular\OpenSans-Regular.svg" />
+    <Content Include="Resources\UI\css\fonts\fonts\SemiboldItalic\OpenSans-SemiboldItalic.svg" />
+    <Content Include="Resources\UI\css\fonts\fonts\Semibold\OpenSans-Semibold.svg" />
+    <Content Include="Resources\UI\css\fonts\open-sans.css" />
+    <Content Include="Resources\UI\css\jquery-ui.css" />
+    <Content Include="Resources\UI\css\main.css.map" />
+    <Content Include="Resources\UI\fonts\fontawesome-webfont.eot" />
+    <Content Include="Resources\UI\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Resources\UI\fonts\fontawesome-webfont.woff" />
+    <Content Include="Resources\UI\fonts\FontAwesome.otf" />
+    <Content Include="Resources\UI\fonts\themify.eot" />
+    <Content Include="Resources\UI\fonts\themify.ttf" />
+    <Content Include="Resources\UI\fonts\themify.woff" />
+    <Content Include="Resources\UI\img\.gitignore" />
+    <Content Include="Resources\UI\img\app_logo_side254.png" />
+    <Content Include="Resources\UI\img\app_logo_side123.png" />
+    <Content Include="Resources\UI\img\app_logo_side.png" />
+    <Content Include="Resources\UI\img\FBTSLogo.png" />
+    <Content Include="Resources\UI\img\img.png" />
+    <Content Include="Resources\UI\img\options-icon.gif" />
+    <Content Include="Resources\UI\js\CustomScripts\Controls.js" />
+    <Content Include="Resources\UI\js\CustomScripts\CustomScripts.js" />
+    <Content Include="Resources\UI\js\CustomScripts\Print.js" />
+    <Content Include="Resources\UI\js\CustomScripts\Security.js" />
+    <Content Include="Resources\UI\js\CustomScripts\validateMyForms.js" />
+    <Content Include="Resources\UI\less\color-variables\palette.1.less" />
+    <Content Include="Resources\UI\less\color-variables\palette.2.less" />
+    <Content Include="Resources\UI\less\color-variables\palette.3.less" />
+    <Content Include="Resources\UI\less\color-variables\palette.4.less" />
+    <Content Include="Resources\UI\less\demo.less" />
+    <Content Include="Resources\UI\less\font-variables\opensans.less" />
+    <Content Include="Resources\UI\less\font.less" />
+    <Content Include="Resources\UI\less\header.less" />
+    <Content Include="Resources\UI\less\main.less" />
+    <Content Include="Resources\UI\less\mixins.less" />
+    <Content Include="Resources\UI\less\modules\bootstrap.less" />
+    <Content Include="Resources\UI\less\modules\buttons.less" />
+    <Content Include="Resources\UI\less\modules\carousel.less" />
+    <Content Include="Resources\UI\less\modules\dropdown.less" />
+    <Content Include="Resources\UI\less\modules\forms.less" />
+    <Content Include="Resources\UI\less\modules\labels.less" />
+    <Content Include="Resources\UI\less\modules\navbar.less" />
+    <Content Include="Resources\UI\less\modules\navs.less" />
+    <Content Include="Resources\UI\less\modules\panel.less" />
+    <Content Include="Resources\UI\less\modules\progress.less" />
+    <Content Include="Resources\UI\less\modules\scheme.less" />
+    <Content Include="Resources\UI\less\modules\table.less" />
+    <Content Include="Resources\UI\less\offscreen.less" />
+    <Content Include="Resources\UI\less\pages\400_500.less" />
+    <Content Include="Resources\UI\less\pages\catalog.less" />
+    <Content Include="Resources\UI\less\pages\chat.less" />
+    <Content Include="Resources\UI\less\pages\gallery.less" />
+    <Content Include="Resources\UI\less\pages\timeline.less" />
+    <Content Include="Resources\UI\less\palette.less" />
+    <Content Include="Resources\UI\less\plugins.less" />
+    <Content Include="Resources\UI\less\scaffolding.less" />
+    <Content Include="Resources\UI\less\sidebar.less" />
+    <Content Include="Resources\UI\less\structure.less" />
+    <Content Include="Resources\UI\less\utilities.less" />
+    <Content Include="Resources\UI\less\variables.less" />
+    <Content Include="Resources\UI\less\widgets.less" />
+    <Content Include="Resources\UI\plugins\bootstrap-markdown\.editorconfig" />
+    <Content Include="Resources\UI\plugins\bootstrap-tagsinput\.travis.yml" />
+    <Content Include="Resources\UI\plugins\enjoyhint\Casino_Hand\casino_hand-webfont.eot" />
+    <Content Include="Resources\UI\plugins\enjoyhint\Casino_Hand\casino_hand-webfont.ttf" />
+    <Content Include="Resources\UI\plugins\enjoyhint\Casino_Hand\casino_hand-webfont.woff" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\PSD\sprite-skin.psd" />
+    <Content Include="Resources\UI\plugins\jgrowl\jquery.jgrowl.css" />
+    <Content Include="Resources\UI\plugins\jgrowl\jquery.jgrowl.js" />
+    <Content Include="Resources\UI\plugins\jgrowl\jquery.jgrowl.min.js" />
+    <Content Include="Resources\UI\plugins\jquery-ui.min.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_en.js.template" />
+    <Content Include="Resources\UI\css\fonts\fonts\BoldItalic\OpenSans-BoldItalic.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\BoldItalic\OpenSans-BoldItalic.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\BoldItalic\OpenSans-BoldItalic.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\BoldItalic\OpenSans-BoldItalic.woff2" />
+    <Content Include="Resources\UI\css\fonts\fonts\Bold\OpenSans-Bold.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\Bold\OpenSans-Bold.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\Bold\OpenSans-Bold.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\Bold\OpenSans-Bold.woff2" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBoldItalic\OpenSans-ExtraBoldItalic.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBoldItalic\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBoldItalic\OpenSans-ExtraBoldItalic.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBoldItalic\OpenSans-ExtraBoldItalic.woff2" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBold\OpenSans-ExtraBold.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBold\OpenSans-ExtraBold.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBold\OpenSans-ExtraBold.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\ExtraBold\OpenSans-ExtraBold.woff2" />
+    <Content Include="Resources\UI\css\fonts\fonts\Italic\OpenSans-Italic.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\Italic\OpenSans-Italic.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\Italic\OpenSans-Italic.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\Italic\OpenSans-Italic.woff2" />
+    <Content Include="Resources\UI\css\fonts\fonts\LightItalic\OpenSans-LightItalic.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\LightItalic\OpenSans-LightItalic.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\LightItalic\OpenSans-LightItalic.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\LightItalic\OpenSans-LightItalic.woff2" />
+    <Content Include="Resources\UI\css\fonts\fonts\Light\OpenSans-Light.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\Light\OpenSans-Light.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\Light\OpenSans-Light.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\Light\OpenSans-Light.woff2" />
+    <Content Include="Resources\UI\css\fonts\fonts\Regular\OpenSans-Regular.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\Regular\OpenSans-Regular.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\Regular\OpenSans-Regular.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\Regular\OpenSans-Regular.woff2" />
+    <Content Include="Resources\UI\css\fonts\fonts\SemiboldItalic\OpenSans-SemiboldItalic.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\SemiboldItalic\OpenSans-SemiboldItalic.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\SemiboldItalic\OpenSans-SemiboldItalic.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\SemiboldItalic\OpenSans-SemiboldItalic.woff2" />
+    <Content Include="Resources\UI\css\fonts\fonts\Semibold\OpenSans-Semibold.eot" />
+    <Content Include="Resources\UI\css\fonts\fonts\Semibold\OpenSans-Semibold.ttf" />
+    <Content Include="Resources\UI\css\fonts\fonts\Semibold\OpenSans-Semibold.woff" />
+    <Content Include="Resources\UI\css\fonts\fonts\Semibold\OpenSans-Semibold.woff2" />
+    <Content Include="Resources\UI\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Resources\UI\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Resources\UI\bootstrap\css\bootstrap.css" />
+    <Content Include="Resources\UI\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Resources\UI\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resources\UI\bootstrap\js\bootstrap.js" />
+    <Content Include="Resources\UI\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Resources\UI\css\animate.css" />
+    <Content Include="Resources\UI\css\animate.min.css" />
+    <Content Include="Resources\UI\css\font-awesome.css" />
+    <Content Include="Resources\UI\css\font-awesome.min.css" />
+    <Content Include="Resources\UI\css\fonts\font.css" />
+    <Content Include="Resources\UI\css\main.css" />
+    <Content Include="Resources\UI\css\skins\palette.2.css" />
+    <Content Include="Resources\UI\css\skins\palette.3.css" />
+    <Content Include="Resources\UI\css\skins\palette.4.css" />
+    <Content Include="Resources\UI\css\skins\palette.css" />
+    <Content Include="Resources\UI\css\themify-icons.css" />
+    <Content Include="Resources\UI\data\datatables-arrays.txt" />
+    <Content Include="Resources\UI\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resources\UI\fonts\themify.svg" />
+    <Content Include="Resources\UI\img\close.gif" />
+    <Content Include="Resources\UI\img\cm.png" />
+    <Content Include="Resources\UI\img\cover1.jpg" />
+    <Content Include="Resources\UI\img\faceless.jpg" />
+    <Content Include="Resources\UI\img\flag.png" />
+    <Content Include="Resources\UI\img\invoice.png" />
+    <Content Include="Resources\UI\img\loading.gif" />
+    <Content Include="Resources\UI\img\logo.png" />
+    <Content Include="Resources\UI\img\minimal%402x.png" />
+    <Content Include="Resources\UI\img\minimal.png" />
+    <Content Include="Resources\UI\img\pool.jpg" />
+    <Content Include="Resources\UI\img\sago.jpg" />
+    <Content Include="Resources\UI\img\sagomod.jpg" />
+    <Content Include="Resources\UI\img\sagomod.png" />
+    <Content Include="Resources\UI\img\thumb.jpg" />
+    <Content Include="Resources\UI\img\thumb2.png" />
+    <Content Include="Resources\UI\img\tree-icon.png" />
+    <Content Include="Resources\UI\js\animated.js" />
+    <Content Include="Resources\UI\js\bootstrap-datatables.js" />
+    <Content Include="Resources\UI\js\buttons.js" />
+    <Content Include="Resources\UI\js\calendar.js" />
+    <Content Include="Resources\UI\js\catalog.js" />
+    <Content Include="Resources\UI\js\chart.js" />
+    <Content Include="Resources\UI\js\dashboard.js" />
+    <Content Include="Resources\UI\js\datatables.js" />
+    <Content Include="Resources\UI\js\demo-mock.js" />
+    <Content Include="Resources\UI\js\editor.js" />
+    <Content Include="Resources\UI\js\form-crop.js" />
+    <Content Include="Resources\UI\js\form-custom.js" />
+    <Content Include="Resources\UI\js\form-masks.js" />
+    <Content Include="Resources\UI\js\form-wizard.js" />
+    <Content Include="Resources\UI\js\form-wysiwyg.js" />
+    <Content Include="Resources\UI\js\gallery.js" />
+    <Content Include="Resources\UI\js\general.js" />
+    <Content Include="Resources\UI\js\jstree.js" />
+    <Content Include="Resources\UI\js\main.js" />
+    <Content Include="Resources\UI\js\maps.js" />
+    <Content Include="Resources\UI\js\notifications.js" />
+    <Content Include="Resources\UI\js\offscreen.js" />
+    <Content Include="Resources\UI\js\panel.js" />
+    <Content Include="Resources\UI\js\pickers.js" />
+    <Content Include="Resources\UI\js\progress-slider.js" />
+    <Content Include="Resources\UI\js\sortable.js" />
+    <Content Include="Resources\UI\js\table-edit.js" />
+    <Content Include="Resources\UI\js\tour.js" />
+    <Content Include="Resources\UI\js\vector.js" />
+    <Content Include="Resources\UI\js\x-editable.js" />
+    <Content Include="Resources\UI\plugins\address\address.css" />
+    <Content Include="Resources\UI\plugins\address\address.js" />
+    <Content Include="Resources\UI\plugins\appear\jquery.appear.js" />
+    <Content Include="Resources\UI\plugins\bootstrap-colorpalette\bootstrap-colorpalette.css" />
+    <Content Include="Resources\UI\plugins\bootstrap-colorpalette\bootstrap-colorpalette.js" />
+    <Content Include="Resources\UI\plugins\bootstrap-markdown\css\bootstrap-markdown.min.css" />
+    <Content Include="Resources\UI\plugins\bootstrap-markdown\js\bootstrap-markdown.js" />
+    <Content Include="Resources\UI\plugins\bootstrap-markdown\locale\bootstrap-markdown.fr.js" />
+    <Content Include="Resources\UI\plugins\bootstrap-markdown\locale\bootstrap-markdown.nl.js" />
+    <Content Include="Resources\UI\plugins\bootstrap-rating-input\bootstrap-rating-input.min.js" />
+    <Content Include="Resources\UI\plugins\bootstrap-tagsinput\bootstrap-tagsinput.css" />
+    <Content Include="Resources\UI\plugins\bootstrap-tagsinput\bootstrap-tagsinput.js" />
+    <Content Include="Resources\UI\plugins\bootstrap-tagsinput\bootstrap-tagsinput.min.js" />
+    <Content Include="Resources\UI\plugins\bootstrap-timepicker\bootstrap-timepicker.css" />
+    <Content Include="Resources\UI\plugins\bootstrap-timepicker\bootstrap-timepicker.js" />
+    <Content Include="Resources\UI\plugins\bootstrap-timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="Resources\UI\plugins\bootstrap-timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Resources\UI\plugins\chartjs\Chart.js" />
+    <Content Include="Resources\UI\plugins\chartjs\Chart.min.js" />
+    <Content Include="Resources\UI\plugins\chosen\chosen-sprite%402x.png" />
+    <Content Include="Resources\UI\plugins\chosen\chosen-sprite.png" />
+    <Content Include="Resources\UI\plugins\chosen\chosen.css" />
+    <Content Include="Resources\UI\plugins\chosen\chosen.jquery.js" />
+    <Content Include="Resources\UI\plugins\chosen\chosen.jquery.min.js" />
+    <Content Include="Resources\UI\plugins\chosen\chosen.min.css" />
+    <Content Include="Resources\UI\plugins\colorpicker\css\colorpicker.css" />
+    <Content Include="Resources\UI\plugins\colorpicker\img\alpha.png" />
+    <Content Include="Resources\UI\plugins\colorpicker\img\hue.png" />
+    <Content Include="Resources\UI\plugins\colorpicker\img\saturation.png" />
+    <Content Include="Resources\UI\plugins\colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="Resources\UI\plugins\count-to\jquery.countTo.js" />
+    <Content Include="Resources\UI\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="Resources\UI\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Resources\UI\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="Resources\UI\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Resources\UI\plugins\datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="Resources\UI\plugins\datatables\jquery.dataTables_themeroller.min.css" />
+    <Content Include="Resources\UI\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="Resources\UI\plugins\datepicker\datepicker.css" />
+    <Content Include="Resources\UI\plugins\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="Resources\UI\plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="Resources\UI\plugins\dropzone\basic.css" />
+    <Content Include="Resources\UI\plugins\dropzone\dropzone.css" />
+    <Content Include="Resources\UI\plugins\dropzone\dropzone.js" />
+    <Content Include="Resources\UI\plugins\dropzone\dropzone.min.js" />
+    <Content Include="Resources\UI\plugins\dropzone\images\spritemap%402x.png" />
+    <Content Include="Resources\UI\plugins\dropzone\images\spritemap.png" />
+    <Content Include="Resources\UI\plugins\easy-pie-chart\jquery.easypiechart.js" />
+    <Content Include="Resources\UI\plugins\easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="Resources\UI\plugins\enjoyhint\Casino_Hand\casino_hand-webfont.svg" />
+    <Content Include="Resources\UI\plugins\enjoyhint\enjoyhint.css" />
+    <Content Include="Resources\UI\plugins\enjoyhint\enjoyhint.js" />
+    <Content Include="Resources\UI\plugins\enjoyhint\enjoyhint.min.js" />
+    <Content Include="Resources\UI\plugins\fastclick.js" />
+    <Content Include="Resources\UI\plugins\flot\excanvas.js" />
+    <Content Include="Resources\UI\plugins\flot\excanvas.min.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.colorhelpers.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.canvas.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.categories.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.crosshair.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.errorbars.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.fillbetween.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.image.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.navigate.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.orderBars.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.selection.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.stack.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.symbol.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.threshold.js" />
+    <Content Include="Resources\UI\plugins\flot\jquery.flot.time.js" />
+    <Content Include="Resources\UI\plugins\fuelux\pillbox.js" />
+    <Content Include="Resources\UI\plugins\fuelux\spinner.js" />
+    <Content Include="Resources\UI\plugins\fuelux\wizard.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Resources\UI\plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Resources\UI\plugins\fullcalendar\gcal.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang-all.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\ar-ma.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\ar-sa.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\ar.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\bg.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\ca.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\cs.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\da.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\de-at.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\de.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\el.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\en-au.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\en-ca.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\en-gb.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\es.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\fa.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\fi.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\fr-ca.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\fr.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\hi.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\hr.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\hu.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\id.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\is.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\it.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\ja.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\ko.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\lt.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\lv.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\nl.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\pl.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\pt-br.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\pt.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\ro.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\ru.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\sk.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\sl.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\sr.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\sv.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\th.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\tr.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\uk.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\vi.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\zh-cn.js" />
+    <Content Include="Resources\UI\plugins\fullcalendar\lang\zh-tw.js" />
+    <Content Include="Resources\UI\plugins\gmaps.js" />
+    <Content Include="Resources\UI\plugins\icheck\icheck.js" />
+    <Content Include="Resources\UI\plugins\icheck\icheck.min.js" />
+    <Content Include="Resources\UI\plugins\icheck\skins\all.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\aero%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\aero.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\aero.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\blue%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\blue.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\blue.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\flat%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\flat.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\flat.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\green%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\green.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\green.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\grey%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\grey.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\grey.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\orange%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\orange.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\orange.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\pink%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\pink.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\pink.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\purple%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\purple.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\purple.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\red%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\red.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\red.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\yellow%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\yellow.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\yellow.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\flat\_all.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\futurico\futurico%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\futurico\futurico.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\futurico\futurico.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\aero.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\blue.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\green.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\grey.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\line%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\line.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\line.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\orange.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\pink.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\purple.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\red.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\yellow.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\line\_all.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\aero%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\aero.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\aero.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\blue%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\blue.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\blue.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\green%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\green.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\green.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\grey%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\grey.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\grey.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\minimal%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\minimal.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\minimal.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\orange%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\orange.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\orange.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\pink%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\pink.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\pink.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\purple%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\purple.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\purple.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\red%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\red.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\red.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\yellow%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\yellow.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\yellow.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\minimal\_all.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\polaris\polaris%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\polaris\polaris.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\polaris\polaris.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\aero%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\aero.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\aero.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\blue%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\blue.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\blue.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\green%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\green.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\green.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\grey%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\grey.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\grey.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\orange%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\orange.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\orange.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\pink%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\pink.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\pink.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\purple%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\purple.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\purple.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\red%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\red.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\red.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\square%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\square.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\square.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\yellow%402x.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\yellow.css" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\yellow.png" />
+    <Content Include="Resources\UI\plugins\icheck\skins\square\_all.css" />
+    <Content Include="Resources\UI\plugins\imagesloaded\imagesloaded.js" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\img\sprite-skin-flat.png" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\img\sprite-skin-flat2.png" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\img\sprite-skin-nice.png" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\img\sprite-skin-simple.png" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\ion.rangeSlider.css" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\ion.rangeSlider.js" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\ion.rangeSlider.min.js" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\ion.rangeSlider.skinNice.css" />
+    <Content Include="Resources\UI\plugins\ion.rangeSlider\ion.rangeSlider.skinSimple.css" />
+    <Content Include="Resources\UI\plugins\isotope\isotope.pkgd.js" />
+    <Content Include="Resources\UI\plugins\isotope\isotope.pkgd.min.js" />
+    <Content Include="Resources\UI\plugins\Jcrop\css\Jcrop.gif" />
+    <Content Include="Resources\UI\plugins\Jcrop\css\jquery.Jcrop.css" />
+    <Content Include="Resources\UI\plugins\Jcrop\css\jquery.Jcrop.min.css" />
+    <Content Include="Resources\UI\plugins\Jcrop\js\jquery.color.js" />
+    <Content Include="Resources\UI\plugins\Jcrop\js\jquery.Jcrop.js" />
+    <Content Include="Resources\UI\plugins\Jcrop\js\jquery.Jcrop.min.js" />
+    <Content Include="Resources\UI\plugins\Jcrop\js\jquery.min.js" />
+    <Content Include="Resources\UI\plugins\jquery-1.11.1.min.js" />
+    <Content Include="Resources\UI\plugins\jquery-ui.custom.min.js" />
+    <Content Include="Resources\UI\plugins\jquery.blockUI.js" />
+    <Content Include="Resources\UI\plugins\jquery.easing.min.js" />
+    <Content Include="Resources\UI\plugins\jquery.maskedinput.min.js" />
+    <Content Include="Resources\UI\plugins\jquery.mockjax.js" />
+    <Content Include="Resources\UI\plugins\jquery.nestable.js" />
+    <Content Include="Resources\UI\plugins\jquery.placeholder.js" />
+    <Content Include="Resources\UI\plugins\jquery.slimscroll.min.js" />
+    <Content Include="Resources\UI\plugins\jquery.sortable.js" />
+    <Content Include="Resources\UI\plugins\jquery.sparkline.js" />
+    <Content Include="Resources\UI\plugins\jstree\jstree.js" />
+    <Content Include="Resources\UI\plugins\jstree\jstree.min.js" />
+    <Content Include="Resources\UI\plugins\jstree\themes\default\32px.png" />
+    <Content Include="Resources\UI\plugins\jstree\themes\default\40px.png" />
+    <Content Include="Resources\UI\plugins\jstree\themes\default\ds.gif" />
+    <Content Include="Resources\UI\plugins\jstree\themes\default\jh.GIF" />
+    <Content Include="Resources\UI\plugins\jstree\themes\default\style.css" />
+    <Content Include="Resources\UI\plugins\jstree\themes\default\style.min.css" />
+    <Content Include="Resources\UI\plugins\jstree\themes\default\throbber.GIF" />
+    <Content Include="Resources\UI\plugins\jvectormap\jquery-jvectormap-1.1.1.css" />
+    <Content Include="Resources\UI\plugins\jvectormap\jquery-jvectormap-1.1.1.min.js" />
+    <Content Include="Resources\UI\plugins\jvectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Resources\UI\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Resources\UI\plugins\jvectormap\jquery-jvectormap-us-lcc-en.js" />
+    <Content Include="Resources\UI\plugins\jvectormap\jquery-jvectormap-us-mill-en.js" />
+    <Content Include="Resources\UI\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Resources\UI\plugins\medium\classList.min.js" />
+    <Content Include="Resources\UI\plugins\medium\medium-editor.css" />
+    <Content Include="Resources\UI\plugins\medium\medium-editor.js" />
+    <Content Include="Resources\UI\plugins\medium\medium-editor.min.js" />
+    <Content Include="Resources\UI\plugins\modernizr.js" />
+    <Content Include="Resources\UI\plugins\moment.js" />
+    <Content Include="Resources\UI\plugins\morris\morris.js" />
+    <Content Include="Resources\UI\plugins\morris\morris.min.js" />
+    <Content Include="Resources\UI\plugins\owl-carousel\AjaxLoader.gif" />
+    <Content Include="Resources\UI\plugins\owl-carousel\grabbing.png" />
+    <Content Include="Resources\UI\plugins\owl-carousel\owl.carousel.css" />
+    <Content Include="Resources\UI\plugins\owl-carousel\owl.carousel.js" />
+    <Content Include="Resources\UI\plugins\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Resources\UI\plugins\owl-carousel\owl.theme.css" />
+    <Content Include="Resources\UI\plugins\owl-carousel\owl.transitions.css" />
+    <Content Include="Resources\UI\plugins\parsley.min.js" />
+    <Content Include="Resources\UI\plugins\raphael.min.js" />
+    <Content Include="Resources\UI\plugins\responsive-tables\responsive-tables.js" />
+    <Content Include="Resources\UI\plugins\responsive-tables\theme.css" />
+    <Content Include="Resources\UI\plugins\select2\select2-bootstrap.css" />
+    <Content Include="Resources\UI\plugins\select2\select2.css" />
+    <Content Include="Resources\UI\plugins\select2\select2.js" />
+    <Content Include="Resources\UI\plugins\select2\select2.min.js" />
+    <Content Include="Resources\UI\plugins\select2\select2.png" />
+    <Content Include="Resources\UI\plugins\select2\select2x2.png" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_ar.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_az.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_bg.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_ca.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_cs.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_da.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_de.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_el.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_es.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_et.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_eu.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_fa.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_fi.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_fr.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_gl.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_he.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_hr.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_hu.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_id.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_is.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_it.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_ja.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_ka.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_ko.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_lt.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_lv.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_mk.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_ms.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_nl.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_no.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_pl.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_pt-BR.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_pt-PT.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_ro.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_rs.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_ru.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_sk.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_sv.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_th.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_tr.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_ug-CN.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_uk.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_vi.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_zh-CN.js" />
+    <Content Include="Resources\UI\plugins\select2\select2_locale_zh-TW.js" />
+    <Content Include="Resources\UI\plugins\skycons.js" />
+    <Content Include="Resources\UI\plugins\slider\bootstrap-slider.js" />
+    <Content Include="Resources\UI\plugins\slider\slider.css" />
+    <Content Include="Resources\UI\plugins\stepy\img\alert.png" />
+    <Content Include="Resources\UI\plugins\stepy\img\error.png" />
+    <Content Include="Resources\UI\plugins\stepy\jquery.stepy.css" />
+    <Content Include="Resources\UI\plugins\stepy\jquery.stepy.js" />
+    <Content Include="Resources\UI\plugins\stepy\jquery.stepy.min.js" />
+    <Content Include="Resources\UI\plugins\stepy\jquery.validate.min.js" />
+    <Content Include="Resources\UI\plugins\superbox\superbox.js" />
+    <Content Include="Resources\UI\plugins\superbox\superbox.min.js" />
+    <Content Include="Resources\UI\plugins\switchery\switchery.js" />
+    <Content Include="Resources\UI\plugins\switchery\switchery.min.js" />
+    <Content Include="Resources\UI\plugins\table-sortable\sortable.js" />
+    <Content Include="Resources\UI\plugins\table-sortable\sortable.min.js" />
+    <Content Include="Resources\UI\plugins\table-sortable\theme.css" />
+    <Content Include="Resources\UI\plugins\timepicker\jquery.timepicker.css" />
+    <Content Include="Resources\UI\plugins\timepicker\jquery.timepicker.js" />
+    <Content Include="Resources\UI\plugins\timepicker\jquery.timepicker.min.js" />
+    <Content Include="Resources\UI\plugins\toastr\toastr.css" />
+    <Content Include="Resources\UI\plugins\toastr\toastr.js" />
+    <Content Include="Resources\UI\plugins\toastr\toastr.min.css" />
+    <Content Include="Resources\UI\plugins\toastr\toastr.min.js" />
+    <Content Include="Resources\UI\plugins\typeaheadjs\lib\typeahead.js" />
+    <Content Include="Resources\UI\plugins\typeaheadjs\lib\typeahead.js-bootstrap.css" />
+    <Content Include="Resources\UI\plugins\typeaheadjs\typeaheadjs.js" />
+    <Content Include="Resources\UI\plugins\wizard\bootstrap-wizard.css" />
+    <Content Include="Resources\UI\plugins\wizard\bootstrap-wizard.js" />
+    <Content Include="Resources\UI\plugins\wizard\bootstrap-wizard.min.js" />
+    <Content Include="Resources\UI\plugins\wysiwyg\bootstrap-wysiwyg.js" />
+    <Content Include="Resources\UI\plugins\wysiwyg\jquery.hotkeys.js" />
+    <Content Include="Resources\UI\plugins\x-editable\bootstrap-editable.css" />
+    <Content Include="Resources\UI\plugins\x-editable\bootstrap-editable.js" />
+    <Content Include="Resources\UI\plugins\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Resources\FileUploads\UserImages\avatar3.jpg" />
+    <Content Include="Resources\FileUploads\UserImages\avatar3_small.jpg" />
+    <Content Include="Resources\FileUploads\UserImages\photo1.jpg" />
+    <Content Include="Resources\FileUploads\UserImages\profile-img.jpg" />
+    <Content Include="Resources\FileUploads\UserImages\profile-img.png" />
+    <Content Include="UserControls\Common\AddressControlHorizontal2Col.ascx" />
+    <Content Include="UserControls\Common\AddressControlVertical.ascx" />
+    <Content Include="UserControls\Common\Categorie.ascx" />
+    <Content Include="UserControls\Common\DeleteAndBanPopup.ascx" />
+    <Content Include="UserControls\Common\DropDownListPage.ascx" />
+    <Content Include="UserControls\ForecastingCommon\DashBoardControl.ascx" />
+    <Content Include="UserControls\ForecastingCommon\DynamicGridControl.ascx" />
+    <Content Include="UserControls\ForecastingCommon\ForecastingControl.ascx" />
+    <Content Include="UserControls\ForecastingCommon\ForecastingPartControl.ascx" />
+    <Content Include="UserControls\Common\TransactionStageControl.ascx" />
+    <Content Include="UserControls\Common\EzyHeaderControl.ascx" />
+    <Content Include="UserControls\Common\EzyMenuControl.ascx" />
+    <Content Include="UserControls\Common\CustomMessageControl.ascx" />
+    <Content Include="UserControls\Common\ConfirmationPopup.ascx" />
+    <Content Include="UserControls\Common\PreLoader.ascx" />
+    <Content Include="UserControls\ForecastingCommon\RefrenceControl.ascx" />
+    <Content Include="UserControls\ForecastingCommon\ValidationDdl.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppPages\Billing Tracking\FBTS_Ordering.aspx.cs">
+      <DependentUpon>FBTS_Ordering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Billing Tracking\FBTS_Ordering.aspx.designer.cs">
+      <DependentUpon>FBTS_Ordering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Billing Tracking\FBTS_VarificationTeam.aspx.cs">
+      <DependentUpon>FBTS_VarificationTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Billing Tracking\FBTS_VarificationTeam.aspx.designer.cs">
+      <DependentUpon>FBTS_VarificationTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Common\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Common\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Common\500.aspx.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Common\500.aspx.designer.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Common\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Common\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_Country.aspx.cs">
+      <DependentUpon>FBTS_Country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_Country.aspx.designer.cs">
+      <DependentUpon>FBTS_Country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_DeleteAllTransactionData.aspx.cs">
+      <DependentUpon>FBTS_DeleteAllTransactionData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_DeleteAllTransactionData.aspx.designer.cs">
+      <DependentUpon>FBTS_DeleteAllTransactionData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_UOMMaster.aspx.cs">
+      <DependentUpon>FBTS_UOMMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_UOMMaster.aspx.designer.cs">
+      <DependentUpon>FBTS_UOMMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_AccessLevelSetup.aspx.cs">
+      <DependentUpon>FBTS_AccessLevelSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_AccessLevelSetup.aspx.designer.cs">
+      <DependentUpon>FBTS_AccessLevelSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_CategoryMaster.aspx.cs">
+      <DependentUpon>FBTS_CategoryMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_CategoryMaster.aspx.designer.cs">
+      <DependentUpon>FBTS_CategoryMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_CompanyProfile.aspx.cs">
+      <DependentUpon>FBTS_CompanyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_CompanyProfile.aspx.designer.cs">
+      <DependentUpon>FBTS_CompanyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_Location.aspx.cs">
+      <DependentUpon>FBTS_Location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_Location.aspx.designer.cs">
+      <DependentUpon>FBTS_Location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_ManageMaterialHierarchy.aspx.cs">
+      <DependentUpon>FBTS_ManageMaterialHierarchy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_ManageMaterialHierarchy.aspx.designer.cs">
+      <DependentUpon>FBTS_ManageMaterialHierarchy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_PartMaster.aspx.cs">
+      <DependentUpon>FBTS_PartMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_PartMaster.aspx.designer.cs">
+      <DependentUpon>FBTS_PartMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_PartyMaster.aspx.cs">
+      <DependentUpon>FBTS_PartyMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_PartyMaster.aspx.designer.cs">
+      <DependentUpon>FBTS_PartyMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_StageMaster.aspx.cs">
+      <DependentUpon>FBTS_StageMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_StageMaster.aspx.designer.cs">
+      <DependentUpon>FBTS_StageMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_TeamMaster.aspx.cs">
+      <DependentUpon>FBTS_TeamMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_TeamMaster.aspx.designer.cs">
+      <DependentUpon>FBTS_TeamMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_UserProfile_SSO.aspx.cs">
+      <DependentUpon>FBTS_UserProfile_SSO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_UserProfile_SSO.aspx.designer.cs">
+      <DependentUpon>FBTS_UserProfile_SSO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_UserProfile.aspx.cs">
+      <DependentUpon>FBTS_UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\CPanel\FBTS_UserProfile.aspx.designer.cs">
+      <DependentUpon>FBTS_UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\DashBoardForms\FBTS_DashBoad.aspx.cs">
+      <DependentUpon>FBTS_DashBoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\DashBoardForms\FBTS_DashBoad.aspx.designer.cs">
+      <DependentUpon>FBTS_DashBoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Forecasting\FBTS_ApprovalFC.aspx.cs">
+      <DependentUpon>FBTS_ApprovalFC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Forecasting\FBTS_ApprovalFC.aspx.designer.cs">
+      <DependentUpon>FBTS_ApprovalFC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Forecasting\FBTS_FieldRequestTeam.aspx.cs">
+      <DependentUpon>FBTS_FieldRequestTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Forecasting\FBTS_FieldRequestTeam.aspx.designer.cs">
+      <DependentUpon>FBTS_FieldRequestTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Forecasting\FBTS_ForecastSpecialistTeam.aspx.cs">
+      <DependentUpon>FBTS_ForecastSpecialistTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Forecasting\FBTS_ForecastSpecialistTeam.aspx.designer.cs">
+      <DependentUpon>FBTS_ForecastSpecialistTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Forecasting\FBTS_Teams.aspx.cs">
+      <DependentUpon>FBTS_Teams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Forecasting\FBTS_Teams.aspx.designer.cs">
+      <DependentUpon>FBTS_Teams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\TxnStageFieldRequest.aspx.cs">
+      <DependentUpon>TxnStageFieldRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\TxnStageFieldRequest.aspx.designer.cs">
+      <DependentUpon>TxnStageFieldRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Common\Ezy_Welcome.aspx.cs">
+      <DependentUpon>Ezy_Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Common\Ezy_Welcome.aspx.designer.cs">
+      <DependentUpon>Ezy_Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_AuditLog.aspx.cs">
+      <DependentUpon>FBTS_AuditLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_AuditLog.aspx.designer.cs">
+      <DependentUpon>FBTS_AuditLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_BilledPart.aspx.cs">
+      <DependentUpon>FBTS_BilledPart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_BilledPart.aspx.designer.cs">
+      <DependentUpon>FBTS_BilledPart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_BilledPartViews.aspx.cs">
+      <DependentUpon>FBTS_BilledPartViews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_BilledPartViews.aspx.designer.cs">
+      <DependentUpon>FBTS_BilledPartViews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_CompleteBillTracking.aspx.cs">
+      <DependentUpon>FBTS_CompleteBillTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_CompleteBillTracking.aspx.designer.cs">
+      <DependentUpon>FBTS_CompleteBillTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_ForcastingViews.aspx.cs">
+      <DependentUpon>FBTS_ForcastingViews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_ForcastingViews.aspx.designer.cs">
+      <DependentUpon>FBTS_ForcastingViews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_LocationList.aspx.cs">
+      <DependentUpon>FBTS_LocationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_LocationList.aspx.designer.cs">
+      <DependentUpon>FBTS_LocationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderDetails.aspx.cs">
+      <DependentUpon>FBTS_OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderDetails.aspx.designer.cs">
+      <DependentUpon>FBTS_OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderDetailsForecasting.aspx.cs">
+      <DependentUpon>FBTS_OrderDetailsForecasting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderDetailsForecasting.aspx.designer.cs">
+      <DependentUpon>FBTS_OrderDetailsForecasting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderStatusWise.aspx.cs">
+      <DependentUpon>FBTS_OrderStatusWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderStatusWise.aspx.designer.cs">
+      <DependentUpon>FBTS_OrderStatusWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderStatusWiseForcasting.aspx.cs">
+      <DependentUpon>FBTS_OrderStatusWiseForcasting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderStatusWiseForcasting.aspx.designer.cs">
+      <DependentUpon>FBTS_OrderStatusWiseForcasting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderView.aspx.cs">
+      <DependentUpon>FBTS_OrderView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_OrderView.aspx.designer.cs">
+      <DependentUpon>FBTS_OrderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_StageWiseOrder.aspx.cs">
+      <DependentUpon>FBTS_StageWiseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Views\FBTS_StageWiseOrder.aspx.designer.cs">
+      <DependentUpon>FBTS_StageWiseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="InternalLogin.aspx.cs">
+      <DependentUpon>InternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InternalLogin.aspx.designer.cs">
+      <DependentUpon>InternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoggingOff.aspx.cs">
+      <DependentUpon>LoggingOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoggingOff.aspx.designer.cs">
+      <DependentUpon>LoggingOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionExpired.aspx.cs">
+      <DependentUpon>SessionExpired.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionExpired.aspx.designer.cs">
+      <DependentUpon>SessionExpired.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogoutIntermediate.aspx.cs">
+      <DependentUpon>LogoutIntermediate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogoutIntermediate.aspx.designer.cs">
+      <DependentUpon>LogoutIntermediate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\ResourceFiles\GlobalCustomResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalCustomResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\AddressControlVertical.ascx.cs">
+      <DependentUpon>AddressControlVertical.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\AddressControlVertical.ascx.designer.cs">
+      <DependentUpon>AddressControlVertical.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\Categorie.ascx.cs">
+      <DependentUpon>Categorie.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\Categorie.ascx.designer.cs">
+      <DependentUpon>Categorie.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\DeleteAndBanPopup.ascx.cs">
+      <DependentUpon>DeleteAndBanPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\DeleteAndBanPopup.ascx.designer.cs">
+      <DependentUpon>DeleteAndBanPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\DropDownListPage.ascx.cs">
+      <DependentUpon>DropDownListPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\DropDownListPage.ascx.designer.cs">
+      <DependentUpon>DropDownListPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\DashBoardControl.ascx.cs">
+      <DependentUpon>DashBoardControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\DashBoardControl.ascx.designer.cs">
+      <DependentUpon>DashBoardControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\DynamicGridControl.ascx.cs">
+      <DependentUpon>DynamicGridControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\DynamicGridControl.ascx.designer.cs">
+      <DependentUpon>DynamicGridControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\ForecastingControl.ascx.cs">
+      <DependentUpon>ForecastingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\ForecastingControl.ascx.designer.cs">
+      <DependentUpon>ForecastingControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\ForecastingPartControl.ascx.cs">
+      <DependentUpon>ForecastingPartControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\ForecastingPartControl.ascx.designer.cs">
+      <DependentUpon>ForecastingPartControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\TransactionStageControl.ascx.cs">
+      <DependentUpon>TransactionStageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\TransactionStageControl.ascx.designer.cs">
+      <DependentUpon>TransactionStageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\EzyHeaderControl.ascx.cs">
+      <DependentUpon>EzyHeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\EzyHeaderControl.ascx.designer.cs">
+      <DependentUpon>EzyHeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\EzyMenuControl.ascx.cs">
+      <DependentUpon>EzyMenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\EzyMenuControl.ascx.designer.cs">
+      <DependentUpon>EzyMenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\CustomMessageControl.ascx.cs">
+      <DependentUpon>CustomMessageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\CustomMessageControl.ascx.designer.cs">
+      <DependentUpon>CustomMessageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\ConfirmationPopup.ascx.cs">
+      <DependentUpon>ConfirmationPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\ConfirmationPopup.ascx.designer.cs">
+      <DependentUpon>ConfirmationPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Common\PreLoader.ascx.cs">
+      <DependentUpon>PreLoader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Common\PreLoader.ascx.designer.cs">
+      <DependentUpon>PreLoader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\RefrenceControl.ascx.cs">
+      <DependentUpon>RefrenceControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\RefrenceControl.ascx.designer.cs">
+      <DependentUpon>RefrenceControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\ValidationDdl.ascx.cs">
+      <DependentUpon>ValidationDdl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ForecastingCommon\ValidationDdl.ascx.designer.cs">
+      <DependentUpon>ValidationDdl.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FBTSBusiness\FBTS.Business\FBTS.Business.Manager.csproj">
+      <Project>{38d0b2bf-9d18-4158-96ef-18ba73d99974}</Project>
+      <Name>FBTS.Business.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FBTSLibrary\FBTS.Library.EventLogger\FBTS.Library.EventLogger.csproj">
+      <Project>{51353125-6366-44b3-a19a-7f3901452f43}</Project>
+      <Name>FBTS.Library.EventLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FBTSLibrary\FBTS.Library.Statemanagement\FBTS.Library.Statemanagement.csproj">
+      <Project>{dabd322d-b64e-4a1b-a819-c49db5c70442}</Project>
+      <Name>FBTS.Library.Statemanagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FBTSLibrary\FBTS.Library.WebControls\FBTS.Library.WebControls.csproj">
+      <Project>{2b165a82-7bcd-43f7-9637-19f8c9fea820}</Project>
+      <Name>FBTS.Library.WebControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FBTSData\FBTS.Model.Common\FBTS.Model.Common.csproj">
+      <Project>{d1c25bfa-4aad-4989-a105-eccfffc4d1ed}</Project>
+      <Name>FBTS.Model.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FBTSData\FBTS.Model.Control\FBTS.Model.Control.csproj">
+      <Project>{8e252831-076f-46d6-a4ef-a1d9b7fae23c}</Project>
+      <Name>FBTS.Model.Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FBTSData\FBTS.Model.Transaction\FBTS.Model.Transaction.csproj">
+      <Project>{ff66fa91-3e19-494b-bed5-72eaf57b3b1c}</Project>
+      <Name>FBTS.Model.Transaction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FBTSLibrary\FBTS.App.Library\FBTS.App.Library.csproj">
+      <Project>{435d3efe-2ab5-44b8-88e9-a8112b7a1de4}</Project>
+      <Name>FBTS.App.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FBTSReports\FBTS.Reports\FBTS.Reports.csproj">
+      <Project>{08e5dbd3-de6a-4559-9508-a364d54d58af}</Project>
+      <Name>FBTS.Reports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ResourceFiles\GlobalCustomResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>GlobalCustomResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|x86'">
+    <OutputPath>bin\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|x86'">
+    <OutputPath>bin\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|x86'">
+    <OutputPath>bin\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3885/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>call "$(ProjectDir)Resources\bat\buildconfig.bat" "$(ProjectDir)" "$(ConfigurationName)"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

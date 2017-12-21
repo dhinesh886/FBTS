@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FBTS.Reports.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BV2TxnConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=WIN12-PITC;Initial Catalog=BV2_2016_2017;Persist Security Info=True;User ID=ezyadmin;Password=ezyadmin&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=WIN12-PITC;Initial Catalog=BV2_2016_2017;Persist Security Info=True;User ID=ezyadmin;Password=ezyadmin</Value>
+    </Setting>
+    <Setting Name="FBTS_2016_2017ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=WIN12-PITC;Initial Catalog=FBTS_2016_2017;Persist Security Info=True;User ID=ezyadmin;Password=ezyadmin&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=WIN12-PITC;Initial Catalog=FBTS_2016_2017;Persist Security Info=True;User ID=ezyadmin;Password=ezyadmin</Value>
+    </Setting>
+    <Setting Name="FBTS_2016_2017ConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DVM2-PC\SQLEXPRESS2014;Initial Catalog=FBTS_2016_2017;Persist Security Info=True;User ID=ezyadmin;Password=ezyadmin&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DVM2-PC\SQLEXPRESS2014;Initial Catalog=FBTS_2016_2017;Persist Security Info=True;User ID=ezyadmin;Password=ezyadmin</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

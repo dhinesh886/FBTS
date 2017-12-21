@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>1.36458in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.40625in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Location Code</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#4e648a</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>#384c70</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Location Name</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#4e648a</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>#384c70</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="l_sname">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!l_sname.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>#4d4d4d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>l_sname</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#e5e5e5</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="l_name">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!l_name.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>#4d4d4d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>l_name</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>#e5e5e5</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>LocationList</DataSetName>
+        <Height>0.5in</Height>
+        <Width>2.77083in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>0.51389in</Height>
+    <Style />
+  </Body>
+  <Width>3.83208in</Width>
+  <Page>
+    <PageHeader>
+      <Height>0.84722in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>app_logo_side</Value>
+          <Sizing>FitProportional</Sizing>
+          <Height>0.25in</Height>
+          <Width>0.67708in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox35">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>#4, Whitefield Main Rd, </Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Sadaramangala Industrial Area, Kadugodi,Bengaluru, Karnataka, 560067</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox35</rd:DefaultName>
+          <Top>0.27778in</Top>
+          <Height>0.55208in</Height>
+          <Width>2.5019in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox34">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="Page " &amp; Globals!PageNumber &amp; " / " &amp; Globals!TotalPages</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox34</rd:DefaultName>
+          <Left>3.17583in</Left>
+          <Height>0.25in</Height>
+          <Width>0.59375in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>0.26042in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox33">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=format(Globals!ExecutionTime, "dd/MM/yyyy hh:mm:ss tt")</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox33</rd:DefaultName>
+          <Top>0.01389in</Top>
+          <Height>0.22917in</Height>
+          <Width>1in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="FBTS_2016_2017DataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>007a5c8b-bfbd-4e07-9962-d73d4dd3eb39</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="LocationList">
+      <Query>
+        <DataSourceName>FBTS_2016_2017DataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="l_sname">
+          <DataField>l_sname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="l_name">
+          <DataField>l_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>FBTS_2016_2017</rd:DataSetName>
+        <rd:SchemaPath>D:\FBTS_WORKSPACE\FBTS.Web\Core\FBTS\FBTSReports\FBTS.Reports\DataSources\FBTS_2016_2017.xsd</rd:SchemaPath>
+        <rd:TableName>Location</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>LocationTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="app_logo_side">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAJ0AAABDCAYAAACGEgeJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAUvSURBVHhe7Zs7buMwEIb3XD6Qz+Mz7BFS+AA+gttU7rYJ4CKAixRakiItiuYMHyJHTPJ/wCCLxKL4+DgcKdk/EwDCQDogDqQD4kA6IA6kA+JAOiAOpAPiQDogDqQD4kA6IA6kA+LkS3f/nA5//01/Osbh+mVvxlDQj6z2PM6XeDv94j6d7b1JbvfIdZG4POwFjq/pdLlPx8vn9G6/Mwplma6neHrS7ASHsmyX4WM63W1jHAIbKxaxzfF+/Yh+tjaON9vwAFQcr4/pGBlUcmHZBVU73v38uWOp+7ig7sdc96Z2vbkP3de44JHPExnoZXGpTPWms1AsE6kM9Rb5vJqjU6mIpn0dYRbcl6qarn4XxifucH2oif6YDmoh5uOGmngbWh5WStUOudjqWvMzQrxwc5h7JfqzIUJJ2axu+uJBjXEViWSwAx2kowcZv24R8fUIIMTSglI7OOeIVNnldNURzwBZ2Y5c8Dm7LLVaZAz6/rEsx0nEZKtofwfNchpR6Ra8zKEnxmS5YAEMRIbhpLPkZWOir27xVZ9mOSIFf7Z0jtexrGs5Lpum51SXDbENOlIt59hJOkWwaPHJqZfOkZIvfl+VnaxsZLYolk73Zc6wrt3VZ6IZeulDrL2QZ8Yzm5jayPuzn3QGJZWZVGpy+kvHvlaxIkQ/UyHdjBM66DshHV16RMjayPuzr3Tcohp2lo6jUjrXnxchotLpudRzoLNWXrZLb+T9EZROTQZTvMfZKh1xvRfV2aA60xFEpVNhj8izGW9FuwMiJJ2/+PrI+MzftVukY8XQX0tKgYDW0nGvgAatzWoRkW79SC8kHSmFFxnHM0lz6ahXNV5s6e9AdJfudSL7SpdauONNt1lSIxF0kI48YokY9UEh
+RZF0yZ2YFWnp2txnHfMDgzvCGtRGPaRT8Buaj+8iYaZ0TL1RHAnpCnd7VuisaP/dbGE6SWfIKQ24GLwGzJLumXnscRbfjakHCBe8dOfbw8QMdbxyk8ptkA0PDiG9pHObTs311oyvS4n3uw7b9iDkSWdE2Jb6l2hR0+XtZKq/1e/mfHpmOi/bu8xcO/cHNdd6vk8txtyIwuN1zhT8BKQyXsMHifD7frBZ2cWGzNdTuifB+FebrbzkGaXmK3qQcNQtpJrAqxaloXTkKwRvQVg5dTuV9Y+IdAFhvfuUMCGg+tyc7SrH2hhB6WbcL737Sud4mHulMkLVcbuHdC/4sql7kn1aYoRsJy5dGVulmyH7S/71bgZDSLfAr8kSTerZjfxu6awgVZJ0km7ua+Uc5rxuypyznvxy6XSMJN3reGuOQ268yHRJ2khHv++aBRlGOr9N26/cMa4g+wbpMmghHfNkN1hNt94cuh39tXw+6fVpuTb1/HjpuLf6+sVp+2xSKV2sHtN902PNfBnuIMdc2E4vfrR07K+R1AKc7TiqXiM0lY4Ypx+5G4N5mPi+L4e5J6TKnUlC3YuVLmMBlRhnfexu6GvTjcfUYCZUH8n/lebDrM0ItZyjSDp+ooOoObJ8UgtRG6Zfrs6rycp5Uudnu8RvE1ZBtZloY+taNCZbOvaoIqI2nRfJnRnPnf6UuUa4EkF0Ns7Iovaval5k4k6UghgpwzmqaroszOK2rO+2EGQnkYJaCUqWAAE9srrIGOvoJx0ABJAOiAPpgDiQDogD6YA4kA6IA+mAOJAOiAPpgDiQDogD6YA4kA6IA+mAOJAOiAPpgDiQDogD6YA4kA6IA+mAOJAOiAPpgDiQDogD6YA4kA6IA+mAMNP0Hyg3obJNe3fQAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>2647eed0-ed52-4ad2-96bc-e31b129222e6</rd:ReportID>
+</Report>
